@@ -1,7 +1,20 @@
-# [扁鹊(BianQue)]((https://github.com/scutcyr/BianQie))
+# [扁鹊（BianQue）]((https://github.com/scutcyr/BianQie))
+
+<p align="center">
+    <a href="./LICENSE"><img src="https://img.shields.io/badge/license-Apache%202-red.svg"></a>
+    <a href="support os"><img src="https://img.shields.io/badge/os-linux%2C%20win%2C%20mac-pink.svg"></a>
+    <a href=""><img src="https://img.shields.io/badge/python-3.7+-aff.svg"></a>
+    <a href="https://github.com/scutcyr/BianQie/graphs/contributors"><img src="https://img.shields.io/github/contributors/scutcyr/BianQie?color=9ea"></a>
+    <a href="https://github.com/scutcyr/BianQie/commits"><img src="https://img.shields.io/github/commit-activity/m/scutcyr/BianQie?color=3af"></a>
+    <a href="https://github.com/scutcyr/BianQie/issues"><img src="https://img.shields.io/github/issues/scutcyr/BianQie?color=9cc"></a>
+    <a href="https://github.com/scutcyr/BianQie/stargazers"><img src="https://img.shields.io/github/stars/scutcyr/BianQie?color=ccf"></a>
+</p>
+
+
+
 
 ## 最近更新
-* [扁鹊-1.0：通过混合指令和多轮医生问询数据集的微调，提高医疗聊天模型的“问”能力（BianQue-1.0: Improving the "Question" Ability of Medical Chat Model through finetuning with Hybrid Instructions and Multi-turn Doctor QA Datasets）](https://huggingface.co/scutcyr/BianQue-1.0)
+- 👏🏻  2023.04.22: 扁鹊-1.0版本模型发布，详情见：[扁鹊-1.0：通过混合指令和多轮医生问询数据集的微调，提高医疗聊天模型的“问”能力（BianQue-1.0: Improving the "Question" Ability of Medical Chat Model through finetuning with Hybrid Instructions and Multi-turn Doctor QA Datasets）](https://huggingface.co/scutcyr/BianQue-1.0)
 
 
 ## 简介
