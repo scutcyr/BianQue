@@ -1,6 +1,7 @@
 # [扁鹊（BianQue）]((https://github.com/scutcyr/BianQie))
 
 <p align="center">
+    <img src="imgs/bianque_icon.png" width=400px/>
     <a href="./LICENSE"><img src="https://img.shields.io/badge/license-Apache%202-red.svg"></a>
     <a href="support os"><img src="https://img.shields.io/badge/os-linux%2C%20win%2C%20mac-pink.svg"></a>
     <a href=""><img src="https://img.shields.io/badge/python-3.8+-aff.svg"></a>
