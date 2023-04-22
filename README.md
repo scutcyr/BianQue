@@ -11,9 +11,8 @@
 </p>
 
 
-
-
 ## 最近更新
+- 👏🏻  2023.04.22: 基于扁鹊-1.0模型的医疗问答系统Demo，详情访问：[https://huggingface.co/spaces/scutcyr/BianQue](https://huggingface.co/spaces/scutcyr/BianQue)
 - 👏🏻  2023.04.22: 扁鹊-1.0版本模型发布，详情见：[扁鹊-1.0：通过混合指令和多轮医生问询数据集的微调，提高医疗聊天模型的“问”能力（BianQue-1.0: Improving the "Question" Ability of Medical Chat Model through finetuning with Hybrid Instructions and Multi-turn Doctor QA Datasets）](https://huggingface.co/scutcyr/BianQue-1.0)
 
 
@@ -28,7 +27,6 @@
 扁鹊（BianQue）模型欢迎你的贡献！我们鼓励你在 [BianQue GitHub](https://github.com/scutcyr/BianQue) 页面报告问题、贡献 PR 并参与讨论。我们期待与更多的高校、医院、研究实验室、公司等进行合作，共同开展下一代扁鹊模型研究。对于此类需求（以及其他不适合在 GitHub 上提出的需求），请直接发送电子邮件至 [eeyirongchen@mail.scut.edu.cn](mailto:eeyirongchen@mail.scut.edu.cn)。
 
 
-
 ## 训练数据
 我们结合当前开源的中文医疗问答数据集（[MedDialog-CN](https://github.com/UCSD-AI4H/Medical-Dialogue-System)、[IMCS-V2](https://github.com/lemuria-wchen/imcs21)、[CHIP-MDCFNPC](https://tianchi.aliyun.com/dataset/95414)、[MedDG](https://tianchi.aliyun.com/dataset/95414)、[cMedQA2](https://github.com/zhangsheng93/cMedQA2)、[Chinese-medical-dialogue-data](https://github.com/Toyhom/Chinese-medical-dialogue-data)），以及自建的指令数据集，通过进一步的数据清洗，构建了一个大于900万条样本的**中文医疗问答指令与多轮问询对话混合数据集**，数据集的平均轮数为3，最大轮数达到218，数据格式为：
 ```data
@@ -36,8 +34,6 @@ input: "病人：六岁宝宝拉大便都是一个礼拜或者10天才一次正�
 target: "成形还是不成形呢？孩子吃饭怎么样呢？"
 ```
 训练数据当中混合了大量target文本为**医生问询的内容**而非直接的建议，这将有助于提升AI模型的问询能力。
-
-
 
 
 ## 模型“问”能力示例
