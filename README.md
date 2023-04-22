@@ -126,9 +126,9 @@ conda env create -n bianque_py38 --file py38_conda_env.yml
 conda activate bianque_py38
 pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu116
 ```
-* 数据集构建
+* 数据集构建   
 参考[.data/cMedialog_example.csv](.data/cMedialog_example.csv)格式，构建你的数据集
-* 基于扁鹊-1.0模型微调你的模型
+* 基于扁鹊-1.0模型微调你的模型    
 修改[./scripts/run_train_model_bianque.sh](./scripts/run_train_model_bianque.sh)，通过绝对路径指定PREPROCESS_DATA，并且调整其他变量，然后运行：
 ```bash
 cd scripts
