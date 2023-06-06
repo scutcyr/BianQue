@@ -25,6 +25,11 @@
 - 👏🏻  2023.04.22: 扁鹊-1.0版本模型发布，详情见：[扁鹊-1.0：通过混合指令和多轮医生问询数据集的微调，提高医疗聊天模型的“问”能力（BianQue-1.0: Improving the "Question" Ability of Medical Chat Model through finetuning with Hybrid Instructions and Multi-turn Doctor QA Datasets）](https://huggingface.co/scutcyr/BianQue-1.0)
 
 
+## 扁鹊-2.0
+    基于扁鹊健康大数据BianQueCorpus，我们选择了 [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) 作为初始化模型，经过全量参数的指令微调训练得到了新一代BianQue【BianQue-2.0】。
+
+
+
 ## 扁鹊-1.0
 
 **扁鹊-1.0（BianQue-1.0）** 是一个经过指令与多轮问询对话联合微调的医疗对话大模型。我们经过调研发现，在医疗领域，往往医生需要通过多轮问询才能进行决策，这并不是单纯的“指令-回复”模式。用户在咨询医生时，往往不会在最初就把完整的情况告知医生，因此医生需要不断进行询问，最后才能进行诊断并给出合理的建议。基于此，我们构建了 **扁鹊-1.0（BianQue-1.0）** ，拟在 **强化AI系统的问询能力** ，从而达到模拟医生问诊的过程。我们把这种能力定义为“望闻问切”当中的“问”。综合考虑当前中文语言模型架构、参数量以及所需要的算力，我们采用了[ClueAI/ChatYuan-large-v2](https://huggingface.co/ClueAI/ChatYuan-large-v2)作为基准模型，在8张 NVIDIA RTX 4090显卡上微调了1个epoch得到**扁鹊-1.0（BianQue-1.0）**，用于训练的**中文医疗问答指令与多轮问询对话混合数据集**包含了超过900万条样本，这花费了大约16天的时间完成一个epoch的训练。我们将计划围绕扁鹊模型的“望闻问切”能力，结合医学专家知识、多模态技术、多生理信号计算等，进行多个版本的模型迭代研究。扁鹊（BianQue）模型欢迎你的贡献！我们鼓励你在 [BianQue GitHub](https://github.com/scutcyr/BianQue) 页面报告问题、贡献 PR 并参与讨论。我们期待与更多的高校、医院、研究实验室、公司等进行合作，共同开展下一代扁鹊模型研究。对于此类需求（以及其他不适合在 GitHub 上提出的需求），请直接发送电子邮件至 [eeyirongchen@mail.scut.edu.cn](mailto:eeyirongchen@mail.scut.edu.cn)。
