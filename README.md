@@ -12,6 +12,7 @@
     <a href="https://github.com/scutcyr/BianQie/stargazers"><img src="https://img.shields.io/github/stars/scutcyr/BianQie?color=ccf"></a>
 </p>
 
+基于主动健康的主动性、预防性、精确性、个性化、共建共享、自律性六大特征[[[] Healthy China:Proactive Health: An Imperative to Achieve the Goal of Healthy China. China CDC Weekly.]]，华工未来技术学院-广东省数字孪生人重点实验室开源了中文领域生活空间主动健康大模型基座ProactiveHealthGPT，包括：(1) 经过千万规模中文健康对话数据指令微调的生活空间健康大模型扁鹊 (BianQue) ；(2) 经过百万规模心理咨询领域中文长文本指令与多轮共情对话数据联合指令微调的心理健康大模型灵心 (SoulChat)，我们期望，生活空间主动健康大模型基座ProactiveHealthGPT可以帮助学术界加速大模型在慢性病、心理咨询等主动健康领域的研究与应用。本项目为**生活空间健康大模型扁鹊 (BianQue) **。
 
 ## 最近更新
 - 👏🏻  2023.06.03: 【预告】以ChatGLM-6B为基座的扁鹊-2.0模型即将开源。
