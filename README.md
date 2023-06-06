@@ -111,6 +111,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 model_name_or_path = "scutcyr/BianQue-2.0"
 ```
 
+我们还提供了[bianque_v1_app.py](./bianque_v1_app.py)作为BianQue-1.0模型的使用示例，以及[bianque_v1_v2_app.py](./bianque_v1_v2_app.py)作为BianQue-1.0模型和BianQue-2.0模型的联合使用示例。
 
 ## 扁鹊-2.0
 基于扁鹊健康大数据BianQueCorpus，我们选择了 [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) 作为初始化模型，经过全量参数的指令微调训练得到了[新一代BianQue【BianQue-2.0】](https://huggingface.co/scutcyr/BianQue-2.0)。与扁鹊-1.0模型不同的是，扁鹊-2.0扩充了药品说明书指令、医学百科知识指令以及ChatGPT蒸馏指令等数据，强化了模型的建议与知识查询能力。以下为两个测试样例。
