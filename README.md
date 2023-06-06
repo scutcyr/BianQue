@@ -6,10 +6,10 @@
     <a href="./LICENSE"><img src="https://img.shields.io/badge/license-Apache%202-red.svg"></a>
     <a href="support os"><img src="https://img.shields.io/badge/os-linux%2C%20win%2C%20mac-pink.svg"></a>
     <a href=""><img src="https://img.shields.io/badge/python-3.8+-aff.svg"></a>
-    <a href="https://github.com/scutcyr/BianQie/graphs/contributors"><img src="https://img.shields.io/github/contributors/scutcyr/BianQie?color=9ea"></a>
-    <a href="https://github.com/scutcyr/BianQie/commits"><img src="https://img.shields.io/github/commit-activity/m/scutcyr/BianQie?color=3af"></a>
-    <a href="https://github.com/scutcyr/BianQie/issues"><img src="https://img.shields.io/github/issues/scutcyr/BianQie?color=9cc"></a>
-    <a href="https://github.com/scutcyr/BianQie/stargazers"><img src="https://img.shields.io/github/stars/scutcyr/BianQie?color=ccf"></a>
+    <a href="https://github.com/scutcyr/BianQue/graphs/contributors"><img src="https://img.shields.io/github/contributors/scutcyr/BianQue?color=9ea"></a>
+    <a href="https://github.com/scutcyr/BianQue/commits"><img src="https://img.shields.io/github/commit-activity/m/scutcyr/BianQue?color=3af"></a>
+    <a href="https://github.com/scutcyr/BianQue/issues"><img src="https://img.shields.io/github/issues/scutcyr/BianQue?color=9cc"></a>
+    <a href="https://github.com/scutcyr/BianQue/stargazers"><img src="https://img.shields.io/github/stars/scutcyr/BianQue?color=ccf"></a>
 </p>
 
 基于主动健康的主动性、预防性、精确性、个性化、共建共享、自律性六大特征，华工未来技术学院-广东省数字孪生人重点实验室开源了中文领域生活空间主动健康大模型基座ProactiveHealthGPT，包括：
