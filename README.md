@@ -50,7 +50,7 @@ target: "成形还是不成形呢？孩子吃饭怎么样呢？"
 
 
 ## 扁鹊-2.0
-基于扁鹊健康大数据BianQueCorpus，我们选择了 [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) 作为初始化模型，经过全量参数的指令微调训练得到了[新一代BianQue【BianQue-2.0】](https://huggingface.co/scutcyr/BianQue-2.0)。
+基于扁鹊健康大数据BianQueCorpus，我们选择了 [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) 作为初始化模型，经过全量参数的指令微调训练得到了[新一代BianQue【BianQue-2.0】](https://huggingface.co/scutcyr/BianQue-2.0)。与扁鹊-1.0模型不同的是，扁鹊-2.0扩充了药品说明书指令、医学百科知识指令以及ChatGPT蒸馏指令等数据，强化了模型的建议与知识查询能力。以下为两个测试样例。
 
 
 * 样例1：宝宝特别喜欢打嗝，是什么原因啊，该怎么预防啊
