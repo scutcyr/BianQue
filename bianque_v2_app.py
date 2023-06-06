@@ -43,7 +43,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # 指定模型名称或路径
-model_name_or_path = "scutcyr/BianQue-2.0"
+model_name_or_path = "scutcyr/BianQue-2"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, trust_remote_code=True)
 
