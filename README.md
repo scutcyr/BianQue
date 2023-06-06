@@ -48,6 +48,53 @@ target: "成形还是不成形呢？孩子吃饭怎么样呢？"
 训练数据当中混合了大量target文本为**医生问询的内容**而非直接的建议，这将有助于提升AI模型的问询能力。
 
 
+## 使用方法
+* 克隆本项目
+```bash
+cd ~
+git clone https://github.com/scutcyr/BianQue.git
+```
+
+* 安装依赖
+需要注意的是torch的版本需要根据你的服务器实际的cuda版本选择，详情参考[pytorch安装指南](https://pytorch.org/get-started/previous-versions/)
+```bash
+cd BianQue
+conda env create -n proactivehealthgpt_py38 --file proactivehealthgpt_py38.yml
+conda activate proactivehealthgpt_py38
+
+pip install cpm_kernels
+pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu116
+```
+
+* 在Python当中调用BianQue-2.0模型：
+```python
+import torch
+from transformers import AutoModel, AutoTokenizer
+# GPU设置
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# 加载模型与tokenizer
+model_name_or_path = 'scutcyr/BianQue-2.0'
+model = AutoModel.from_pretrained(model_name_or_path, trust_remote_code=True).half()
+model.to(device)
+tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, trust_remote_code=True)
+
+# 单轮对话调用模型的chat函数
+user_input = "我的宝宝发烧了，怎么办？"
+input_text = "病人：" + user_input + "\n医生："
+response, history = model.chat(tokenizer, query=input_text, history=None, max_length=2048, num_beams=1, do_sample=True, top_p=0.75, temperature=0.95, logits_processor=None)
+
+# 多轮对话调用模型的chat函数
+# 注意：本项目使用"\n病人："和"\n医生："划分不同轮次的对话历史
+# 注意：user_history比bot_history的长度多1
+user_history = ['你好', '我最近失眠了']
+bot_history = ['我是利用人工智能技术，结合大数据训练得到的智能医疗问答模型扁鹊，你可以向我提问。']
+# 拼接对话历史
+context = "\n".join([f"病人：{user_history[i]}\n医生：{bot_history[i]}" for i in range(len(bot_history))])
+input_text = context + "\n病人：" + user_history[-1] + "\n医生："
+
+response, history = model.chat(tokenizer, query=input_text, history=None, max_length=2048, num_beams=1, do_sample=True, top_p=0.75, temperature=0.95, logits_processor=None)
+```
+
 
 ## 扁鹊-2.0
 基于扁鹊健康大数据BianQueCorpus，我们选择了 [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) 作为初始化模型，经过全量参数的指令微调训练得到了[新一代BianQue【BianQue-2.0】](https://huggingface.co/scutcyr/BianQue-2.0)。与扁鹊-1.0模型不同的是，扁鹊-2.0扩充了药品说明书指令、医学百科知识指令以及ChatGPT蒸馏指令等数据，强化了模型的建议与知识查询能力。以下为两个测试样例。
