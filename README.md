@@ -25,6 +25,21 @@
 - 👏🏻  2023.04.22: 扁鹊-1.0版本模型发布，详情见：[扁鹊-1.0：通过混合指令和多轮医生问询数据集的微调，提高医疗聊天模型的“问”能力（BianQue-1.0: Improving the "Question" Ability of Medical Chat Model through finetuning with Hybrid Instructions and Multi-turn Doctor QA Datasets）](https://huggingface.co/scutcyr/BianQue-1.0)
 
 
+### 训练数据
+我们经过调研发现，在健康领域，用户通常不会在一轮交互当中清晰地描述自己的问题，而当前常见的开源医疗问答模型（例如：ChatDoctor、本草(HuaTuo，原名华驼 )、DoctorGLM、MedicalGPT-zh）侧重于解决单轮用户描述的问题，而忽略了“用户描述可能存在不足”的情况。哪怕是当前大火的ChatGPT也会存在类似的问题：如果用户不强制通过文本描述让ChatGPT采用一问一答的形式，ChatGPT也偏向于针对用户的描述，迅速给出它认为合适的建议和方案。然而，实际的医生与用户交谈往往会存在“医生根据用户当前的描述进行持续多轮的询问”。并且医生在最后根据用户提供的信息综合给出建议，如下图所示。我们把医生不断问询的过程定义为 **询问链（CoQ, Chain of Questioning）** ，当模型处于询问链阶段，其下一个问题通常由对话上下文历史决定。
+
+
+
+
+我们结合当前开源的中文医疗问答数据集（[MedDialog-CN](https://github.com/UCSD-AI4H/Medical-Dialogue-System)、[IMCS-V2](https://github.com/lemuria-wchen/imcs21)、[CHIP-MDCFNPC](https://tianchi.aliyun.com/dataset/95414)、[MedDG](https://tianchi.aliyun.com/dataset/95414)、[cMedQA2](https://github.com/zhangsheng93/cMedQA2)、[Chinese-medical-dialogue-data](https://github.com/Toyhom/Chinese-medical-dialogue-data)），以及自建的指令数据集，通过进一步的数据清洗，构建了一个大于900万条样本的**中文医疗问答指令与多轮问询对话混合数据集**，数据集的平均轮数为3，最大轮数达到218，数据格式为：
+```data
+input: "病人：六岁宝宝拉大便都是一个礼拜或者10天才一次正常吗，要去医院检查什么项目\n医生：您好\n病人：六岁宝宝拉大便都是一个礼拜或者10天才一次正常吗，要去医院检查什么项目\n医生：宝宝之前大便什么样呢？多久一次呢\n病人：一般都是一个礼拜，最近这几个月都是10多天\n医生：大便干吗？\n病人：每次10多天拉的很多\n医生："
+target: "成形还是不成形呢？孩子吃饭怎么样呢？"
+```
+训练数据当中混合了大量target文本为**医生问询的内容**而非直接的建议，这将有助于提升AI模型的问询能力。
+
+
+
 ## 扁鹊-2.0
 基于扁鹊健康大数据BianQueCorpus，我们选择了 [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) 作为初始化模型，经过全量参数的指令微调训练得到了新一代BianQue【BianQue-2.0】。
 
@@ -34,13 +49,6 @@
 
 **扁鹊-1.0（BianQue-1.0）** 是一个经过指令与多轮问询对话联合微调的医疗对话大模型。我们经过调研发现，在医疗领域，往往医生需要通过多轮问询才能进行决策，这并不是单纯的“指令-回复”模式。用户在咨询医生时，往往不会在最初就把完整的情况告知医生，因此医生需要不断进行询问，最后才能进行诊断并给出合理的建议。基于此，我们构建了 **扁鹊-1.0（BianQue-1.0）** ，拟在 **强化AI系统的问询能力** ，从而达到模拟医生问诊的过程。我们把这种能力定义为“望闻问切”当中的“问”。综合考虑当前中文语言模型架构、参数量以及所需要的算力，我们采用了[ClueAI/ChatYuan-large-v2](https://huggingface.co/ClueAI/ChatYuan-large-v2)作为基准模型，在8张 NVIDIA RTX 4090显卡上微调了1个epoch得到**扁鹊-1.0（BianQue-1.0）**，用于训练的**中文医疗问答指令与多轮问询对话混合数据集**包含了超过900万条样本，这花费了大约16天的时间完成一个epoch的训练。我们将计划围绕扁鹊模型的“望闻问切”能力，结合医学专家知识、多模态技术、多生理信号计算等，进行多个版本的模型迭代研究。扁鹊（BianQue）模型欢迎你的贡献！我们鼓励你在 [BianQue GitHub](https://github.com/scutcyr/BianQue) 页面报告问题、贡献 PR 并参与讨论。我们期待与更多的高校、医院、研究实验室、公司等进行合作，共同开展下一代扁鹊模型研究。对于此类需求（以及其他不适合在 GitHub 上提出的需求），请直接发送电子邮件至 [eeyirongchen@mail.scut.edu.cn](mailto:eeyirongchen@mail.scut.edu.cn)。
 
-### 训练数据
-我们结合当前开源的中文医疗问答数据集（[MedDialog-CN](https://github.com/UCSD-AI4H/Medical-Dialogue-System)、[IMCS-V2](https://github.com/lemuria-wchen/imcs21)、[CHIP-MDCFNPC](https://tianchi.aliyun.com/dataset/95414)、[MedDG](https://tianchi.aliyun.com/dataset/95414)、[cMedQA2](https://github.com/zhangsheng93/cMedQA2)、[Chinese-medical-dialogue-data](https://github.com/Toyhom/Chinese-medical-dialogue-data)），以及自建的指令数据集，通过进一步的数据清洗，构建了一个大于900万条样本的**中文医疗问答指令与多轮问询对话混合数据集**，数据集的平均轮数为3，最大轮数达到218，数据格式为：
-```data
-input: "病人：六岁宝宝拉大便都是一个礼拜或者10天才一次正常吗，要去医院检查什么项目\n医生：您好\n病人：六岁宝宝拉大便都是一个礼拜或者10天才一次正常吗，要去医院检查什么项目\n医生：宝宝之前大便什么样呢？多久一次呢\n病人：一般都是一个礼拜，最近这几个月都是10多天\n医生：大便干吗？\n病人：每次10多天拉的很多\n医生："
-target: "成形还是不成形呢？孩子吃饭怎么样呢？"
-```
-训练数据当中混合了大量target文本为**医生问询的内容**而非直接的建议，这将有助于提升AI模型的问询能力。
 
 ### 模型“问”能力示例
 “望闻问切”四诊法由扁鹊发明。“四诊法”（望、闻、问、切），是中医诊病的基本方法。其中，“问”的能力可以被建模到语言模型当中。我们把AI模型的“问”能力定义为：    
