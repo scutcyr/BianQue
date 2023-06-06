@@ -19,7 +19,7 @@
 我们期望，**生活空间主动健康大模型基座ProactiveHealthGPT** 可以帮助学术界加速大模型在慢性病、心理咨询等主动健康领域的研究与应用。本项目为 **生活空间健康大模型扁鹊（BianQue）** 。
 
 ## 最近更新
-- 👏🏻  2023.06.06: 扁鹊-2.0模型开源，详情见[BianQue-2.0](https://huggingface.co/scutcyr/BianQue-2.0)。
+- 👏🏻  2023.06.06: 扁鹊-2.0模型开源，详情见[BianQue-2.0](https://huggingface.co/scutcyr/BianQue-2)。
 - 👏🏻  2023.06.06: 具备共情与倾听能力的灵心健康大模型SoulChat发布，详情见：[灵心健康大模型SoulChat：通过长文本咨询指令与多轮共情对话数据集的混合微调，提升大模型的“共情”能力 ](https://huggingface.co/scutcyr/SoulChat)。
 - 👏🏻  2023.04.22: 基于扁鹊-1.0模型的医疗问答系统Demo，详情访问：[https://huggingface.co/spaces/scutcyr/BianQue](https://huggingface.co/spaces/scutcyr/BianQue)
 - 👏🏻  2023.04.22: 扁鹊-1.0版本模型发布，详情见：[扁鹊-1.0：通过混合指令和多轮医生问询数据集的微调，提高医疗聊天模型的“问”能力（BianQue-1.0: Improving the "Question" Ability of Medical Chat Model through finetuning with Hybrid Instructions and Multi-turn Doctor QA Datasets）](https://huggingface.co/scutcyr/BianQue-1.0)
@@ -73,7 +73,7 @@ from transformers import AutoModel, AutoTokenizer
 # GPU设置
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # 加载模型与tokenizer
-model_name_or_path = 'scutcyr/BianQue-2.0'
+model_name_or_path = 'scutcyr/BianQue-2'
 model = AutoModel.from_pretrained(model_name_or_path, trust_remote_code=True).half()
 model.to(device)
 tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, trust_remote_code=True)
@@ -114,7 +114,7 @@ model_name_or_path = "scutcyr/BianQue-2.0"
 我们还提供了[bianque_v1_app.py](./bianque_v1_app.py)作为BianQue-1.0模型的使用示例，以及[bianque_v1_v2_app.py](./bianque_v1_v2_app.py)作为BianQue-1.0模型和BianQue-2.0模型的联合使用示例。
 
 ## 扁鹊-2.0
-基于扁鹊健康大数据BianQueCorpus，我们选择了 [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) 作为初始化模型，经过全量参数的指令微调训练得到了[新一代BianQue【BianQue-2.0】](https://huggingface.co/scutcyr/BianQue-2.0)。与扁鹊-1.0模型不同的是，扁鹊-2.0扩充了药品说明书指令、医学百科知识指令以及ChatGPT蒸馏指令等数据，强化了模型的建议与知识查询能力。以下为两个测试样例。
+基于扁鹊健康大数据BianQueCorpus，我们选择了 [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) 作为初始化模型，经过全量参数的指令微调训练得到了[新一代BianQue【BianQue-2.0】](https://huggingface.co/scutcyr/BianQue-2)。与扁鹊-1.0模型不同的是，扁鹊-2.0扩充了药品说明书指令、医学百科知识指令以及ChatGPT蒸馏指令等数据，强化了模型的建议与知识查询能力。以下为两个测试样例。
 
 
 * 样例1：宝宝特别喜欢打嗝，是什么原因啊，该怎么预防啊
