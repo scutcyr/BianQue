@@ -65,7 +65,7 @@ target: "成形还是不成形呢？孩子吃饭怎么样呢？"
 
 用户也可以同时调用扁鹊-1.0和扁鹊-2.0模型，构建问询和建议能力兼顾的生活空间健康应用，以下为应用例子：前面若干轮为经过扁鹊-1.0模型进行问询的过程，最后一轮回复为经过扁鹊-2.0模型的回答。
 <p align="center">
-    <img src="./figure/example_test3.png" width=600px/>
+    <img src="./figure/example_multi_turn.png" width=600px/>
 </p>
 
 
