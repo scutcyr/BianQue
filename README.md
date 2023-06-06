@@ -108,7 +108,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 ```
 可以通过更改以下代码指定模型路径为本地路径：
 ```python
-model_name_or_path = "scutcyr/BianQue-2.0"
+model_name_or_path = "scutcyr/BianQue-2"
 ```
 
 我们还提供了[bianque_v1_app.py](./bianque_v1_app.py)作为BianQue-1.0模型的使用示例，以及[bianque_v1_v2_app.py](./bianque_v1_v2_app.py)作为BianQue-1.0模型和BianQue-2.0模型的联合使用示例。
