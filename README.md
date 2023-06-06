@@ -53,6 +53,12 @@ target: "成形还是不成形呢？孩子吃饭怎么样呢？"
 基于扁鹊健康大数据BianQueCorpus，我们选择了 [ChatGLM-6B](https://huggingface.co/THUDM/chatglm-6b) 作为初始化模型，经过全量参数的指令微调训练得到了新一代BianQue【BianQue-2.0】。
 
 
+* 样例1：宝宝特别喜欢打嗝，是什么原因啊，该怎么预防啊
+<p align="center">
+    <img src="./figure/example_test1.png" width=600px/>
+</p>
+
+
 
 ## 扁鹊-1.0
 
