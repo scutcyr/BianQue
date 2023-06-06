@@ -28,7 +28,9 @@
 ### 训练数据
 我们经过调研发现，在健康领域，用户通常不会在一轮交互当中清晰地描述自己的问题，而当前常见的开源医疗问答模型（例如：ChatDoctor、本草(HuaTuo，原名华驼 )、DoctorGLM、MedicalGPT-zh）侧重于解决单轮用户描述的问题，而忽略了“用户描述可能存在不足”的情况。哪怕是当前大火的ChatGPT也会存在类似的问题：如果用户不强制通过文本描述让ChatGPT采用一问一答的形式，ChatGPT也偏向于针对用户的描述，迅速给出它认为合适的建议和方案。然而，实际的医生与用户交谈往往会存在“医生根据用户当前的描述进行持续多轮的询问”。并且医生在最后根据用户提供的信息综合给出建议，如下图所示。我们把医生不断问询的过程定义为 **询问链（CoQ, Chain of Questioning）** ，当模型处于询问链阶段，其下一个问题通常由对话上下文历史决定。
 
-
+<p align="center">
+    <img src="./figure/cuq.png" width=900px/>
+</p>
 
 
 我们结合当前开源的中文医疗问答数据集（[MedDialog-CN](https://github.com/UCSD-AI4H/Medical-Dialogue-System)、[IMCS-V2](https://github.com/lemuria-wchen/imcs21)、[CHIP-MDCFNPC](https://tianchi.aliyun.com/dataset/95414)、[MedDG](https://tianchi.aliyun.com/dataset/95414)、[cMedQA2](https://github.com/zhangsheng93/cMedQA2)、[Chinese-medical-dialogue-data](https://github.com/Toyhom/Chinese-medical-dialogue-data)），以及自建的指令数据集，通过进一步的数据清洗，构建了一个大于900万条样本的**中文医疗问答指令与多轮问询对话混合数据集**，数据集的平均轮数为3，最大轮数达到218，数据格式为：
