@@ -45,7 +45,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # 指定模型名称或路径
 bianque_v1_model_name_or_path = "scutcyr/BianQue-1.0"
-bianque_v2_model_name_or_path = "scutcyr/BianQue-2.0"
+bianque_v2_model_name_or_path = "scutcyr/BianQue-2"
 
 bianque_v1_tokenizer = T5Tokenizer.from_pretrained(bianque_v1_model_name_or_path)
 bianque_v2_tokenizer = AutoTokenizer.from_pretrained(bianque_v2_model_name_or_path, trust_remote_code=True)
