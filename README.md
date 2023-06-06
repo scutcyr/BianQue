@@ -95,7 +95,8 @@ input_text = context + "\n病人：" + user_history[-1] + "\n医生："
 response, history = model.chat(tokenizer, query=input_text, history=None, max_length=2048, num_beams=1, do_sample=True, top_p=0.75, temperature=0.95, logits_processor=None)
 ```
 
-* 启动服务   
+* 启动服务
+   
 本项目提供了[bianque_v2_app.py](./bianque_v2_app.py)作为BianQue-2.0模型的使用示例，通过以下命令即可开启服务，然后，通过http://<your_ip>:9005访问。
 ```bash
 streamlit run bianque_v2_app.py --server.port 9005
