@@ -183,7 +183,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 tokenizer = T5Tokenizer.from_pretrained("scutcyr/BianQue-1.0")
 model = T5ForConditionalGeneration.from_pretrained("scutcyr/BianQue-1.0")
-
+model = model.to(device)
 
 def preprocess(text):
     text = text.replace("\n", "\\n").replace("\t", "\\t")
