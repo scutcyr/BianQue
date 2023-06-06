@@ -1,4 +1,4 @@
-# [扁鹊（BianQue）]((https://github.com/scutcyr/BianQie))
+# [扁鹊（BianQue）]((https://github.com/scutcyr/BianQue))
 <p align="center">
     <img src="./ProactiveHealthGPT.png" width=900px/>
 </p>
