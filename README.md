@@ -33,7 +33,7 @@
 </p>
 
 
-我们结合当前开源的中文医疗问答数据集（[MedDialog-CN](https://github.com/UCSD-AI4H/Medical-Dialogue-System)、[IMCS-V2](https://github.com/lemuria-wchen/imcs21)、[CHIP-MDCFNPC](https://tianchi.aliyun.com/dataset/95414)、[MedDG](https://tianchi.aliyun.com/dataset/95414)、[cMedQA2](https://github.com/zhangsheng93/cMedQA2)、[Chinese-medical-dialogue-data](https://github.com/Toyhom/Chinese-medical-dialogue-data)），以及自建的指令数据集，通过进一步的数据清洗，构建了一个大于900万条样本的**中文医疗问答指令与多轮问询对话混合数据集**，数据集的平均轮数为3，最大轮数达到218，数据格式为：
+我们结合当前开源的中文医疗问答数据集（[MedDialog-CN](https://github.com/UCSD-AI4H/Medical-Dialogue-System)、[IMCS-V2](https://github.com/lemuria-wchen/imcs21)、[CHIP-MDCFNPC](https://tianchi.aliyun.com/dataset/95414)、[MedDG](https://tianchi.aliyun.com/dataset/95414)、[cMedQA2](https://github.com/zhangsheng93/cMedQA2)、[Chinese-medical-dialogue-data](https://github.com/Toyhom/Chinese-medical-dialogue-data)），，分析其中的单轮/多轮特性以及医生问询特性，结合实验室长期自建的生活空间健康对话大数据，构建了千万级别规模的扁鹊健康大数据BianQueCorpus。对话数据通过“病人：xxx\n医生：xxx\n病人：xxx\n医生：”的形式统一为一种指令格式，如下图所示。
 ```data
 input: "病人：六岁宝宝拉大便都是一个礼拜或者10天才一次正常吗，要去医院检查什么项目\n医生：您好\n病人：六岁宝宝拉大便都是一个礼拜或者10天才一次正常吗，要去医院检查什么项目\n医生：宝宝之前大便什么样呢？多久一次呢\n病人：一般都是一个礼拜，最近这几个月都是10多天\n医生：大便干吗？\n病人：每次10多天拉的很多\n医生："
 target: "成形还是不成形呢？孩子吃饭怎么样呢？"
