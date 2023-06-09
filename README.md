@@ -75,6 +75,7 @@ pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 torchaudio==0.13.1 --e
 pip install -r requirements.txt
 pip install rouge_chinese nltk jieba datasets
 pip install streamlit
+pip install streamlit_chat
 ```
 
 * 在Python当中调用BianQue-2.0模型：
