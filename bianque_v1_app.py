@@ -38,7 +38,7 @@ import streamlit as st
 from streamlit_chat import message
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0' # 默认使用0号显卡，避免Windows用户忘记修改该处
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 model_name_or_path = "scutcyr/BianQue-1.0"
