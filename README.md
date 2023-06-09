@@ -120,6 +120,8 @@ streamlit run bianque_v2_app.py --server.port 9005
 ```python
 os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 ```
+**对于Windows单显卡用户，需要修改为：```os.environ['CUDA_VISIBLE_DEVICES'] = '0'```，否则会报错！**
+
 可以通过更改以下代码指定模型路径为本地路径：
 ```python
 model_name_or_path = "scutcyr/BianQue-2"
