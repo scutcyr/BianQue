@@ -74,9 +74,11 @@ conda activate proactivehealthgpt_py38
 pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu116
 pip install -r requirements.txt
 pip install rouge_chinese nltk jieba datasets
+# 以下安装为了运行demo
 pip install streamlit
 pip install streamlit_chat
 ```
+* 【补充】Windows下配置CUDA-11.6：[下载并且安装CUDA-11.6](https://developer.nvidia.com/cuda-11-6-0-download-archive?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_local)、[下载cudnn-8.4.0，解压并且复制其中的文件到CUDA-11.6对应的路径](https://developer.nvidia.com/compute/cudnn/secure/8.4.0/local_installers/11.6/cudnn-windows-x86_64-8.4.0.27_cuda11.6-archive.zip)，参考：[win11下利用conda进行pytorch安装-cuda11.6-泛用安装思路](https://blog.csdn.net/qq_34740266/article/details/129137794)
 
 * 在Python当中调用BianQue-2.0模型：
 ```python
