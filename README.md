@@ -277,6 +277,14 @@ bash run_train_model_bianque.sh
 ## 致谢
 本项目由[华南理工大学未来技术学院](https://www2.scut.edu.cn/ft/main.htm) 广东省数字孪生人重点实验室发起，得到了华南理工大学信息网络工程研究中心、电子与信息学院等学院部门的支撑，同时致谢广东省妇幼保健院、广州市妇女儿童医疗中心、中山大学附属第三医院、合肥综合性国家科学中心人工智能研究院等合作单位。
 
+同时，我们感谢以下媒体或公众号对本项目的报道（排名不分先后）：
+* 媒体报道
+  [人民日报](https://wap.peopleapp.com/article/rmh36174922/rmh36174922)、[中国网](https://hs.china.com.cn/gd/83980.html)、[光明网](https://health.gmw.cn/2023-06/13/content_36628062.htm)、[TOM科技](https://tech.tom.com/202306/4526869977.html)、[未来网](http://www.zzfuture.cn/news/956.html)、[大众网](http://linyi.dzwww.com.3xw.site/xinwen/202306/t20230613_202306135667.htm)、[中国发展报道网](http://www.chinafzbdw.com/computer/13149.html?1686564408)、[中国日报网](http://energy.chinaduily.com.cn/c/2023/15205.html)、[新华资讯网](http://www.xinhuazxun.com/world/21762.html?1686564382)、[中华网](https://life.china.com/2023-06/12/content_215815.html)、[今日头条](https://www.toutiao.com/article/7243412314223952418/)、[搜狐](https://www.sohu.com/a/684501109_120159010)、[腾讯新闻](https://page.om.qq.com/page/OhSXIMEUtDtdg0rTi6aAoTbg0)、[网易新闻](https://www.163.com/dy/article/I70BJ9U00552UJUX.html)、[中国资讯网](http://www.chinazxun.com/world/23252.html?1686564532)、[中国传播网](http://www.chinachbo.com/a/view/11697.html?1686564509)、[中国都市报道网](http://www.zgdsbdw.com/meida/11273.html?1686564485)、[中华城市网](http://www.zhcsww.com/hot/2023/0612/9609.html?1686564434)
+
+* 公众号
+  [广东实验室建设](https://mp.weixin.qq.com/s/gemlKfLg8c-AtjiV7uTUTQ)、[智能语音新青年](https://mp.weixin.qq.com/s/vBMKXUJoAIywkXY2nY60eA)、[深度学习与NLP](https://mp.weixin.qq.com/s/qSHLT8FbvohZESp-UCah6g)、[AINLP](https://mp.weixin.qq.com/s/EX3f9WblLKM8K_nSwhno_g)
+
+
 ## 引用
 ```bib
 @article{chen2023bianque1,
