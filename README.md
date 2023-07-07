@@ -21,6 +21,7 @@
 ## 最近更新
 - 👏🏻  2023.07.07: 心理健康大模型灵心（SoulChat）在线内测版本启用，欢迎点击链接使用：[灵心内测版](https://soulchat.iai007.cloud/)。
 - 👏🏻  2023.07.01: 感谢[PULSE]([PULSE](https://github.com/openmedlab/PULSE))团队提供的Elo评测，点击[链接](https://github.com/openmedlab/PULSE#elo%E8%AF%84%E6%B5%8B)查看详情。
+- 👏🏻  2023.06.24: 本项目被收录到[中国大模型列表](https://github.com/wgwang/LLMs-In-China)，为国内首个开源的具备多轮问询与建议能力的健康大模型。
 - 👏🏻  2023.06.09: 增加Windows下环境配置，详情见本文件的小节：【补充】Windows下的用户推荐参考如下流程配置环境。
 - 👏🏻  2023.06.06: 扁鹊-2.0模型开源，详情见[BianQue-2.0](https://huggingface.co/scutcyr/BianQue-2)。
 - 👏🏻  2023.06.06: 具备共情与倾听能力的灵心健康大模型SoulChat发布，详情见：[灵心健康大模型SoulChat：通过长文本咨询指令与多轮共情对话数据集的混合微调，提升大模型的“共情”能力 ](https://huggingface.co/scutcyr/SoulChat)。
