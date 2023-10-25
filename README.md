@@ -288,10 +288,12 @@ bash run_train_model_bianque.sh
 
 ## 引用
 ```bib
-@article{chen2023bianque1,
+@misc{chen2023bianque,
       title={BianQue: Balancing the Questioning and Suggestion Ability of Health LLMs with Multi-turn Health Conversations Polished by ChatGPT}, 
-      author={Yirong Chen, Zhenyu Wang, Xiaofen Xing, huimin zheng, Zhipei Xu, Kai Fang, Junhong Wang, Sihang Li, Jieling Wu, Qi Liu, Xiangmin Xu},
+      author={Yirong Chen and Zhenyu Wang and Xiaofen Xing and huimin zheng and Zhipei Xu and Kai Fang and Junhong Wang and Sihang Li and Jieling Wu and Qi Liu and Xiangmin Xu},
       year={2023},
-      url={https://github.com/scutcyr/BianQue}
+      eprint={2310.15896},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
 }
 ```
