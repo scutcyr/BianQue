@@ -6,6 +6,7 @@
     <a href="./LICENSE"><img src="https://img.shields.io/badge/license-Apache%202-red.svg"></a>
     <a href="support os"><img src="https://img.shields.io/badge/os-linux%2C%20win%2C%20mac-pink.svg"></a>
     <a href=""><img src="https://img.shields.io/badge/python-3.8+-aff.svg"></a>
+    <a href="https://arxiv.org/abs/2310.15896"><img src="https://img.shields.io/badge/arXiv-2205.14727-b31b1b.svg"></a>
     <a href="https://github.com/scutcyr/BianQue/graphs/contributors"><img src="https://img.shields.io/github/contributors/scutcyr/BianQue?color=9ea"></a>
     <a href="https://github.com/scutcyr/BianQue/commits"><img src="https://img.shields.io/github/commit-activity/m/scutcyr/BianQue?color=3af"></a>
     <a href="https://github.com/scutcyr/BianQue/issues"><img src="https://img.shields.io/github/issues/scutcyr/BianQue?color=9cc"></a>
